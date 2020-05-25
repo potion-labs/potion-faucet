@@ -12,7 +12,10 @@
         />
       </p>
       <form v-else @submit.prevent="handleSubmit" class="form">
-        <p class="mb-6">Mint fake DAI and play with in on Potion.</p>
+        <p class="mb-6">
+          Mint fake DAI and play with it on
+          <a href="https://potion.finance" target="_blank">Potion</a>.
+        </p>
         <div class="mb-4">
           <input
             type="text"
