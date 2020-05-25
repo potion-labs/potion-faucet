@@ -1,0 +1,178 @@
+@import '~@vue/ui/dist/vue-ui.css';
+@import '~primer-support/index.scss';
+@import './assets/fonts/iconfont.css';
+
+$primary: #FF0089;
+$secondary: #1B162F;
+$bg-topnav: #242038;
+$bg-color: #724CF9;
+$bg-disabled: #3B344D;
+$text-disabled: #666274;
+
+$body-font-size: 17px;
+$border-radius: 12px;
+$h1-size: 32px;
+$body-line-height: 1.2;
+$border: 1px solid $bg-color;
+
+@font-face {font-family: 'Europa-Regular';
+  src: url('./assets/fonts/23c0fcab84d99da0de762de7e220a6e1.eot');
+  src: url('./assets/fonts/23c0fcab84d99da0de762de7e220a6e1.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/23c0fcab84d99da0de762de7e220a6e1.woff2') format('woff2'),
+  url('./assets/fonts/23c0fcab84d99da0de762de7e220a6e1.woff') format('woff'),
+  url('./assets/fonts/23c0fcab84d99da0de762de7e220a6e1.ttf') format('truetype'),
+  url('./assets/fonts/23c0fcab84d99da0de762de7e220a6e1.svg#Europa Regular') format('svg');
+}
+
+@font-face {font-family: 'Europa-Bold';
+  src: url('./assets/fonts/d3bfee78e8ead45d9057a95bb6ff5de8.eot');
+  src: url('./assets/fonts/d3bfee78e8ead45d9057a95bb6ff5de8.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/d3bfee78e8ead45d9057a95bb6ff5de8.woff2') format('woff2'),
+  url('./assets/fonts/d3bfee78e8ead45d9057a95bb6ff5de8.woff') format('woff'),
+  url('./assets/fonts/d3bfee78e8ead45d9057a95bb6ff5de8.ttf') format('truetype'),
+  url('./assets/fonts/d3bfee78e8ead45d9057a95bb6ff5de8.svg#Europa-Bold') format('svg');
+}
+
+* {
+  outline: none;
+}
+
+@import '~@primer/css/index.scss';
+
+html, body, #app {
+  text-align: center;
+  background-color: $bg-topnav;
+  color: white;
+  font-family: 'Europa-Regular', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#app {
+  background-color: $bg-color;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .button {
+  font-family: 'Europa-Bold', Helvetica, Arial, sans-serif;
+}
+
+a {
+  cursor: pointer;
+  color: $primary;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button {
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 200px;
+  padding: 0 24px;
+  display: inline-block;
+  border: 0;
+
+  &:disabled {
+    color: $text-disabled;
+    background-color: $secondary;
+    border: 0;
+    cursor: not-allowed;
+  }
+}
+
+.button-primary {
+  height: 44px;
+  line-height: 42px;
+  border-radius: 22px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  background-color: $primary;
+}
+
+.form {
+  max-width: 368px;
+  margin: 0 auto;
+}
+
+.input {
+  text-align: left;
+  border: 1px solid white;
+  background: transparent;
+  outline: none;
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  padding: 0 14px;
+  border-radius: 6px;
+  color: white;
+  width: 100%;
+
+  &:focus {
+    border-color: $bg-color;
+  }
+}
+
+input.input:read-only {
+  color: $text-disabled;
+  border-color: $text-disabled;
+  cursor: not-allowed;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $secondary;
+  border: 0;
+  border-radius: 0;
+  background-clip: padding-box;
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+.block {
+  @extend .container-sm;
+  @extend .bg-secondary;
+  @extend .rounded-lg-1;
+  @extend .rounded-md-1;
+  @extend .rounded-sm-1;
+  @extend .py-6;
+  @extend .px-4;
+  @extend .mb-4;
+  background-color: $bg-topnav;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+
+  p {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.container-sm {
+  max-width: 500px;
+}
+
+.vue-ui-loading-indicator {
+  background-color: transparent !important;
+
+  .animation {
+    border-color: transparentize(white, 0.8);
+    border-width: 4px !important;
+    width: 26px !important;
+    height: 26px !important;
+    border-right-color: white;
+  }
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
